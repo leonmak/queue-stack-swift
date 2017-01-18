@@ -17,19 +17,21 @@ enum QueueError: Error {
  */
 public struct Queue<T> {
     
+    public init() {}
+    
     /// An array to store elements in the queue
     fileprivate var array = [T]()
     
     /// Adds an element to the tail of the queue.
     /// - Parameter item: The element to be added to the queue
-    mutating func enqueue(_ item: T) {
+    public mutating func enqueue(_ item: T) {
         array.append(item)
     }
 
     /// Removes an element from the head of the queue and return it.
     /// - Returns: item at the head of the queue
     /// - Throws: QueueError.EmptyQueue
-    mutating func dequeue() throws -> T {
+    public mutating func dequeue() throws -> T {
         if isEmpty {
             throw QueueError.emptyQueue
         }
@@ -39,7 +41,7 @@ public struct Queue<T> {
     /// Returns, but does not remove, the element at the head of the queue.
     /// - Returns: item at the head of the queue
     /// - Throws: QueueError.EmptyQueue
-    func peek() throws -> T {
+    public func peek() throws -> T {
         if isEmpty {
             throw QueueError.emptyQueue
         }
@@ -47,24 +49,24 @@ public struct Queue<T> {
     }
 
     /// The number of elements currently in the queue.
-    var count: Int {
+    public var count: Int {
         return array.count
     }
 
     /// Whether the queue is empty.
-    var isEmpty: Bool {
+    public var isEmpty: Bool {
         return array.isEmpty
     }
 
     /// Removes all elements in the queue.
-    mutating func removeAll() {
+    public mutating func removeAll() {
         array.removeAll()
     }
 
     /// Returns an array of the elements in their respective dequeue order, i.e.
     /// first element in the array is the first element to be dequeued.
     /// - Returns: array of elements in their respective dequeue order
-    func toArray() -> [T] {
+    public func toArray() -> [T] {
         return array
     }
 }
