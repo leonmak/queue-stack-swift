@@ -1,0 +1,6 @@
+use_frameworks!
+target 'QueueStack_Tests' do
+  pod 'QueueStack', :path => '../'
+  
+  
+end
