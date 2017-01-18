@@ -1,0 +1,6 @@
+framework module QueueStack {
+  umbrella header "QueueStack-umbrella.h"
+
+  export *
+  module * { export * }
+}

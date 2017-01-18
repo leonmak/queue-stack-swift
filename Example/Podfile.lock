@@ -1,0 +1,16 @@
+PODS:
+  - QueueStack (0.1.0)
+
+DEPENDENCIES:
+  - QueueStack (from `../`)
+
+EXTERNAL SOURCES:
+  QueueStack:
+    :path: ../
+
+SPEC CHECKSUMS:
+  QueueStack: 6fe5858a9562ff67a6f62b196184a0d5a09ceab2
+
+PODFILE CHECKSUM: 956dcb0b5384b0e47142802993c0ba0b5355ba52
+
+COCOAPODS: 1.1.1
