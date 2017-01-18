@@ -14,7 +14,7 @@ enum StackError: Error {
  - Authors: CS3217
  - Date: 2017
  */
-struct Stack<T> {
+public struct Stack<T> {
 
     /// An array to store elements in the stack. 
     fileprivate var array = [T]()

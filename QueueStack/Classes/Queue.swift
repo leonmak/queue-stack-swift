@@ -15,7 +15,7 @@ enum QueueError: Error {
  - Authors: CS3217
  - Date: 2017
  */
-struct Queue<T> {
+public struct Queue<T> {
     
     /// An array to store elements in the queue
     fileprivate var array = [T]()
